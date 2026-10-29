@@ -1,0 +1,38 @@
+[
+  {
+    "id": "action",
+    "name": "Action & multiplayer",
+    "icon": "bolt",
+    "order": 1
+  },
+  {
+    "id": "multiplayer",
+    "name": "Multiplayer",
+    "icon": "chess",
+    "order": 2
+  },
+  {
+    "id": "puzzle",
+    "name": "Puzzle & strategy",
+    "icon": "diamond",
+    "order": 3
+  },
+  {
+    "id": "strategy",
+    "name": "Strategy & board",
+    "icon": "board",
+    "order": 4
+  },
+  {
+    "id": "racing",
+    "name": "Racing",
+    "icon": "flag",
+    "order": 5
+  },
+  {
+    "id": "casual",
+    "name": "Game websites & portals",
+    "icon": "circle",
+    "order": 6
+  }
+]

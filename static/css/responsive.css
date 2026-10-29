@@ -1,0 +1,29 @@
+@media (max-width: 760px) {
+    body { font-size: 13px; }
+    .site-header { height: 58px; padding: 0 16px; }
+    .main-nav { gap: 14px; }
+    .nav-search span { display: none; }
+    .page-shell { width: calc(100% - 32px); }
+    .home-page, .directory-page { padding-top: 28px; }
+    .home-intro h1 { font-size: 38px; }
+    .home-layout { grid-template-columns: 1fr; }
+    .home-sidebar { margin-top: 5px; }
+    .community-panel { margin-top: 0; }
+    .side-panel { min-height: 0; }
+    .directory-heading h1 { font-size: 25px; }
+    .directory-layout { grid-template-columns: 1fr; }
+    .category-sidebar { overflow-x: hidden; }
+    .category-nav { grid-template-columns: repeat(2, 1fr); }
+    .directory-help { display: none; }
+    .directory-search { height: 46px; }
+    .results-toolbar { height: 52px; }
+}
+
+@media (max-width: 420px) {
+    .brand-mark { display: none; }
+    .main-nav { gap: 11px; font-size: 11px; }
+    .home-intro > p { line-height: 1.55; }
+    .category-nav { grid-template-columns: 1fr 1fr; }
+    .category-item { padding-inline: 7px; }
+    .type-tab { min-width: 44px; }
+}

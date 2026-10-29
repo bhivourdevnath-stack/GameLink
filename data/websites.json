@@ -1,0 +1,45 @@
+[
+  {
+    "id": "poki",
+    "name": "Poki",
+    "url": "https://poki.com",
+    "type": "website",
+    "category": "casual",
+    "tags": [
+      "Game portal",
+      "Mixed games"
+    ],
+    "description": "A broad collection of browser games for every interest.",
+    "featured": false,
+    "status": "active"
+  },
+  {
+    "id": "crazygames",
+    "name": "CrazyGames",
+    "url": "https://crazygames.com",
+    "type": "website",
+    "category": "casual",
+    "tags": [
+      "Action",
+      "Racing",
+      "Puzzles"
+    ],
+    "description": "Browse browser games across racing, action, puzzles, shooters and more.",
+    "featured": false,
+    "status": "active"
+  },
+  {
+    "id": "itchio-html5",
+    "name": "itch.io HTML5 games",
+    "url": "https://itch.io/games/html5",
+    "type": "website",
+    "category": "casual",
+    "tags": [
+      "Indie",
+      "Browser"
+    ],
+    "description": "Discover free and experimental browser games from independent creators.",
+    "featured": false,
+    "status": "active"
+  }
+]

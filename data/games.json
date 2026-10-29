@@ -1,0 +1,87 @@
+[
+  {
+    "id": "agar-io",
+    "name": "Agar.io",
+    "url": "https://agar.io",
+    "type": "game",
+    "category": "action",
+    "tags": [
+      "Multiplayer",
+      "IO",
+      "Arcade"
+    ],
+    "description": "Eat cells smaller than you and avoid being eaten in this multiplayer agar.io experience.",
+    "featured": true,
+    "status": "active"
+  },
+  {
+    "id": "krunker-io",
+    "name": "Krunker.io",
+    "url": "https://krunker.io",
+    "type": "game",
+    "category": "action",
+    "tags": [
+      "FPS",
+      "Multiplayer"
+    ],
+    "description": "Fast-paced, skill-based FPS browser game played with millions worldwide.",
+    "featured": true,
+    "status": "active"
+  },
+  {
+    "id": "slope-game",
+    "name": "Slope Game",
+    "url": "https://slopegame.com",
+    "type": "game",
+    "category": "racing",
+    "tags": [
+      "Racing",
+      "Endless"
+    ],
+    "description": "Control a rolling ball while racing down an increasingly difficult slope.",
+    "featured": true,
+    "status": "active"
+  },
+  {
+    "id": "2048",
+    "name": "2048",
+    "url": "https://play2048.co",
+    "type": "game",
+    "category": "puzzle",
+    "tags": [
+      "Puzzle",
+      "Strategy"
+    ],
+    "description": "Slide and combine matching number tiles to reach 2048.",
+    "featured": false,
+    "status": "active"
+  },
+  {
+    "id": "lichess",
+    "name": "Lichess",
+    "url": "https://lichess.org",
+    "type": "game",
+    "category": "strategy",
+    "tags": [
+      "Chess",
+      "Multiplayer"
+    ],
+    "description": "Play free chess games, puzzles and tournaments in your browser.",
+    "featured": false,
+    "status": "active"
+  },
+  {
+    "id": "little-alchemy-2",
+    "name": "Little Alchemy 2",
+    "url": "https://littlealchemy.com",
+    "type": "game",
+    "category": "puzzle",
+    "tags": [
+      "Crafting",
+      "Casual"
+    ],
+    "description": "Combine everyday elements to discover new creations.",
+    "featured": false,
+    "status": "active"
+  }
+]

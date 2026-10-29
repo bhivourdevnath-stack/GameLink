@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="PlayLink curated browser game directory">
+    <title>{% block title %}PlayLink{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
+</head>
+<body class="{% block body_class %}{% endblock %}">
+    <header class="site-header">
+        <a class="brand" href="{{ url_for('index') }}" aria-label="PlayLink home">
+            <span class="brand-mark">▣</span>
+            <span>PlayLink</span>
+        </a>
+        <nav class="main-nav" aria-label="Main navigation">
+            <a href="{{ url_for('directory') }}" class="{% if request.endpoint == 'directory' %}active{% endif %}">Directory</a>
+            <a href="{{ url_for('contribute') }}" class="{% if request.endpoint == 'contribute' %}active{% endif %}">Contribute</a>
+            <a href="{{ url_for('about') }}" class="{% if request.endpoint == 'about' %}active{% endif %}">About</a>
+            <a href="{{ url_for('directory') }}" class="nav-search" aria-label="Search directory">⌕ <span>Search games...</span></a>
+        </nav>
+    </header>
+    {% block content %}{% endblock %}
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
