@@ -72,7 +72,6 @@ Maintainers review submissions for a valid URL, duplicate entries, the correct c
 - `static/` — CSS, JavaScript, and images
 - `data/` — JSON catalog data
 - `tests/` — automated tests
-
 ## License
 
 This project is licensed under the MIT License. See [LICENSE](LICENSE).
