@@ -4,17 +4,17 @@
 <main class="directory-page page-shell">
     <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="{{ url_for('index') }}">PlayLink</a><span>›</span><span>Directory</span></nav>
     <section class="directory-heading">
-        <h1>Find your next browser game.</h1>
+        <h1 class="text-roll">Find your next browser game.</h1>
         <p>Curated games and game websites. No downloads to get in the way — just pick a link and play.</p>
     </section>
 
     <div class="directory-layout">
         <aside class="category-sidebar">
-            <h2>Browse by category</h2>
-            <nav class="category-nav" aria-label="Categories">
-                <a class="category-item {% if category == 'all' %}active{% endif %}" href="{{ url_for('directory', q=query, type=resource_type) }}"><span>▦</span> All links</a>
+            <h2>Browse games</h2>
+            <nav class="category-nav" aria-label="Game categories">
+                <a class="category-item {% if category == 'all' %}active{% endif %}" href="{{ url_for('directory', q=query, type=resource_type) }}">All games</a>
                 {% for item in categories %}
-                <a class="category-item {% if category == item.id %}active{% endif %}" href="{{ url_for('directory', category=item.id, q=query, type=resource_type) }}"><span>◇</span> {{ item.name }}</a>
+                <a class="category-item {% if category == item.id %}active{% endif %}" href="{{ url_for('directory', category=item.id, q=query, type=resource_type) }}">{{ item.name }}</a>
                 {% endfor %}
             </nav>
             <section class="directory-help">
@@ -46,20 +46,16 @@
             <div class="directory-resource-list">
                 {% for group in grouped_resources %}
                 <section class="resource-group">
-                    <h3><span>▣</span> {{ group.name }}</h3>
-                    {% for resource in group.resources %}
-                    <article class="resource-row">
-                        <div>
-                            <div class="resource-title"><h4>{{ resource.name }}</h4><span>{{ resource.url | replace('https://', '') | replace('http://', '') | trim('/') }}</span></div>
-                            <p>{{ resource.description }}</p>
-                            <div class="resource-meta">
-                                <span>{{ resource.url | replace('https://', '') | replace('http://', '') | trim('/') }}</span>
-                                {% for tag in resource.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
-                                <a href="{{ resource.url }}" target="_blank" rel="noopener" aria-label="Visit {{ resource.name }}">↗</a>
-                            </div>
-                        </div>
-                    </article>
-                    {% endfor %}
+                    <h2>{{ group.name }}</h2>
+                    <div class="directory-card-grid">
+                        {% for resource in group.resources %}
+                        <a class="directory-game-card" href="{{ resource.url }}" target="_blank" rel="noopener">
+                            <span class="game-cover" aria-hidden="true">{{ resource.name[0] }}</span>
+                            <span class="directory-card-copy"><strong>{{ resource.name }}</strong><small>{{ resource.description }}</small></span>
+                            <span class="external-arrow" aria-hidden="true">↗</span>
+                        </a>
+                        {% endfor %}
+                    </div>
                 </section>
                 {% else %}
                 <p class="no-results">No matching links found.</p>

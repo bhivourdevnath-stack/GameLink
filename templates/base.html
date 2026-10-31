@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="PlayLink curated browser game directory">
     <title>{% block title %}PlayLink{% endblock %}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
 </head>
@@ -22,6 +25,14 @@
         </nav>
     </header>
     {% block content %}{% endblock %}
+    <footer class="site-footer page-shell">
+        <a class="brand" href="{{ url_for('index') }}"><span class="brand-mark">▣</span><span>PlayLink</span></a>
+        <nav aria-label="Footer navigation">
+            <a href="{{ url_for('about') }}">About</a>
+            <a href="{{ url_for('contribute') }}">Contribute</a>
+            <a href="https://github.com/bhivourdevnath-stack/GameLink" target="_blank" rel="noopener">GitHub</a>
+        </nav>
+    </footer>
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
 </html>

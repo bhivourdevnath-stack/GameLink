@@ -104,9 +104,29 @@ def load_catalog_safely():
 
 @app.route("/")
 def index():
-    games, websites, _ = load_catalog_safely()
-    featured = [resource for resource in games + websites if resource.get("featured")]
-    return render_template("index.html", featured_resources=featured[:3])
+    games, websites, categories = load_catalog_safely()
+    resources = games + websites
+    featured = [resource for resource in resources if resource.get("featured")]
+    category_names = {category["id"]: category["name"] for category in categories}
+    collections = []
+    for category in categories:
+        category_resources = [
+            resource for resource in resources
+            if resource.get("category") == category["id"] and resource.get("type") == "game"
+        ][:6]
+        if category_resources:
+            collections.append({
+                "id": category["id"],
+                "name": category["name"],
+                "resources": category_resources,
+            })
+    return render_template(
+        "index.html",
+        featured_resources=featured[:6],
+        categories=categories,
+        category_names=category_names,
+        collections=collections,
+    )
 
 
 @app.route("/directory")

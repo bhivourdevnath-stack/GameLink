@@ -1,66 +1,56 @@
 {% extends "base.html" %}
-
-{% block title %}PlayLink — Browser games directory{% endblock %}
-
+{% block title %}PlayLink — Find your next browser game{% endblock %}
 {% block content %}
-<main class="home-page page-shell">
-    <section class="home-intro">
-        <h1>PlayLink</h1>
-        <p>A curated directory of browser games and game development resources. Discover, play, and contribute to the community.</p>
-        <div class="intro-actions">
-            <a class="button button-primary" href="{{ url_for('directory') }}">Browse Directory</a>
-            <a class="button button-secondary" href="{{ url_for('contribute') }}">Contribute</a>
+<main class="discover-page page-shell">
+    <section class="hero-section">
+        <p class="eyebrow">Browser game directory</p>
+        <h1 class="text-roll">Find a game </h1>
+        <h1 class="text-roll">worth playing.</h1><br>
+        <p>Explore curated browser games and jump straight to the original game site.</p>
+        <form class="hero-search" method="get" action="{{ url_for('directory') }}" role="search">
+            <label class="sr-only" for="home-search">Search games</label>
+            <input id="home-search" name="q" type="search" placeholder="Search games, genres or websites">
+            <button type="submit">Search</button>
+        </form>
+        <div class="quick-links">
+            {% for category in categories[:6] %}
+            <a href="{{ url_for('directory', category=category.id) }}">{{ category.name }}</a>
+            {% endfor %}
         </div>
     </section>
 
-    <div class="home-layout">
-        <section class="home-main" aria-labelledby="curated-heading">
-            <h2 id="curated-heading" class="section-label">Curated links</h2>
-            <div class="resource-list home-resource-list">
-                {% for resource in featured_resources %}
-                <article class="resource-row">
-                    <div class="resource-topline">
-                        <span class="link-icon">⌁</span>
-                        <h3>{{ resource.name }}</h3>
-                        {% if resource.tags %}<span class="type-chip chip-multiplayer">{{ resource.tags[0] }}</span>{% endif %}
-                    </div>
-                    <p>{{ resource.description }}</p>
-                    <div class="resource-meta">
-                        <span>{{ resource.url | replace('https://', '') | replace('http://', '') | trim('/') }}</span>
-                        {% if resource.rating %}<span class="rating">★ {{ resource.rating }}</span>{% endif %}
-                        <a href="{{ resource.url }}" target="_blank" rel="noopener" aria-label="Visit {{ resource.name }}">↗</a>
-                    </div>
-                </article>
-                {% else %}
-                <p>No featured resources are available yet.</p>
-                {% endfor %}
-            </div>
-            
-                <div class="more-link-wrap">
-                <a href="{{ url_for('directory')}}">
-                    <span class="more-label">more game</span>
-                </a>
-                </div>
-            
-        </section>
+    <section class="game-collection featured-collection" aria-labelledby="featured-heading">
+        <div class="collection-heading">
+            <div><p class="section-kicker">Start here</p><h2 id="featured-heading">Featured games</h2></div>
+            <a href="{{ url_for('directory') }}">See all →</a>
+        </div>
+        <div class="game-grid">
+            {% for resource in featured_resources %}
+            <a class="game-card" href="{{ resource.url }}" target="_blank" rel="noopener">
+                <span class="game-cover" aria-hidden="true">{{ resource.name[0] }}</span>
+                <span class="game-card-body"><strong>{{ resource.name }}</strong><small>{{ category_names.get(resource.category, 'Game') }}</small></span>
+                <span class="external-arrow" aria-hidden="true">↗</span>
+            </a>
+            {% endfor %}
+        </div>
+    </section>
 
-        <aside class="home-sidebar">
-            <section class="side-panel">
-                <h2><span class="panel-glyph">▦</span> Contribution</h2>
-                <p>Help us keep the directory up to date. Submit new browser games or report broken links.</p>
-                <a class="panel-button" href="{{ url_for('contribute') }}">Submit a Link</a>
-            </section>
-            <section class="side-panel">
-                <h2><span class="panel-glyph">⌘</span> GitHub</h2>
-                <p>The PlayLink directory is open source. Star us on GitHub to support the project.</p>
-                <a class="panel-button" href="https://github.com" target="_blank" rel="noopener">View on GitHub</a>
-            </section>
-            <section class="side-panel">
-                <h2>Community</h2>
-                <a href="#" class="community-link">◉ Discord</a>
-                <a href="#" class="community-link">♥ Twitter</a>
-            </section>
-        </aside>
-    </div>
+    {% for collection in collections %}
+    <section class="game-collection" aria-labelledby="collection-{{ collection.id }}">
+        <div class="collection-heading">
+            <div><p class="section-kicker">Browse games</p><h2 id="collection-{{ collection.id }}">{{ collection.name }}</h2></div>
+            <a href="{{ url_for('directory', category=collection.id) }}">See all →</a>
+        </div>
+        <div class="game-grid">
+            {% for resource in collection.resources %}
+            <a class="game-card" href="{{ resource.url }}" target="_blank" rel="noopener">
+                <span class="game-cover" aria-hidden="true">{{ resource.name[0] }}</span>
+                <span class="game-card-body"><strong>{{ resource.name }}</strong><small>{{ resource.description[:58] }}{% if resource.description|length > 58 %}…{% endif %}</small></span>
+                <span class="external-arrow" aria-hidden="true">↗</span>
+            </a>
+            {% endfor %}
+        </div>
+    </section>
+    {% endfor %}
 </main>
 {% endblock %}

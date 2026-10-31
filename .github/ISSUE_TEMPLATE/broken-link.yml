@@ -1,0 +1,41 @@
+name: Report a broken link
+description: Report a PlayLink catalog URL that does not work
+title: "Broken link: "
+labels: [broken link]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please include the resource name and the URL shown in PlayLink. Do not submit credentials or personal information.
+  - type: input
+    id: resource
+    attributes:
+      label: Resource name
+      placeholder: Example Game
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Broken URL
+      placeholder: https://example.com
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Include any HTTP error, redirect, page-not-found message, or replacement URL you found.
+      placeholder: The link currently redirects to... / returns a 404 / is unreachable...
+    validations:
+      required: true
+  - type: input
+    id: replacement
+    attributes:
+      label: Replacement URL, if known
+      placeholder: https://example.com/new-location
+  - type: textarea
+    id: details
+    attributes:
+      label: Additional details
+      placeholder: Browser, approximate date, or steps you used to reproduce the problem.

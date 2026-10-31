@@ -83,5 +83,340 @@
     "description": "Combine everyday elements to discover new creations.",
     "featured": false,
     "status": "active"
+  },
+  {
+    "id": "bo1-zombies",
+    "name": "BO1 Zombies",
+    "url": "https://vel.gg/boiz",
+    "type": "game",
+    "category": "action",
+    "tags": [
+      "Zombies",
+      "FPS",
+      "Multiplayer"
+    ],
+    "description": "Browser version of the Call of Duty: Black Ops Zombies experience.",
+    "featured": false,
+    "status": "unverified"
+  },
+  {
+    "id": "moon-zombies",
+    "name": "Moon",
+    "url": "https://moon-zombies.pages.dev",
+    "type": "game",
+    "category": "action",
+    "tags": [
+      "Zombies",
+      "FPS",
+      "Co-op"
+    ],
+    "description": "A browser-hosted Zombies map experience.",
+    "featured": false,
+    "status": "unverified"
+  },
+  {
+    "id": "kino-der-toten",
+    "name": "Kino der Toten",
+    "url": "https://kino-der-toten.pages.dev",
+    "type": "game",
+    "category": "action",
+    "tags": [
+      "Zombies",
+      "FPS",
+      "Co-op"
+    ],
+    "description": "A browser-hosted version of the Kino der Toten Zombies map.",
+    "featured": false,
+    "status": "unverified"
+  },
+  {
+    "id": "bo3-cheese-cube",
+    "name": "BO3 Cheese Cube",
+    "url": "https://cheese-cube.pages.dev",
+    "type": "game",
+    "category": "action",
+    "tags": [
+      "Zombies",
+      "FPS",
+      "Custom map"
+    ],
+    "description": "A browser-hosted Black Ops 3 Zombies custom map experience.",
+    "featured": false,
+    "status": "unverified"
+  },
+  {
+    "id": "black-ops-2",
+    "name": "Black Ops 2",
+    "url": "https://vibeslops.luckeysystems.com",
+    "type": "game",
+    "category": "action",
+    "tags": [
+      "FPS",
+      "Action"
+    ],
+    "description": "A browser-hosted Call of Duty: Black Ops II experience.",
+    "featured": false,
+    "status": "unverified"
+  },
+  {
+    "id": "modern-warfare-2",
+    "name": "Modern Warfare 2",
+    "url": "https://ovz-game-production.up.railway.app",
+    "type": "game",
+    "category": "action",
+    "tags": [
+      "FPS",
+      "Action"
+    ],
+    "description": "A browser-hosted Modern Warfare 2 experience.",
+    "featured": false,
+    "status": "unverified"
+  },
+  {
+    "id": "skate-3",
+    "name": "Skate 3",
+    "url": "https://skate.aaddpp.lol",
+    "type": "game",
+    "category": "sports",
+    "tags": [
+      "Sports",
+      "Skating",
+      "3D"
+    ],
+    "description": "A browser-hosted Skate 3 experience.",
+    "featured": false,
+    "status": "unverified"
+  },
+  {
+    "id": "skate-rust",
+    "name": "Skate Rust",
+    "url": "https://global-terror.net",
+    "type": "game",
+    "category": "sports",
+    "tags": [
+      "Sports",
+      "Skating"
+    ],
+    "description": "A browser-hosted skating game experience.",
+    "featured": false,
+    "status": "unverified"
+  },
+  {
+    "id": "cs-surf",
+    "name": "CS Surf",
+    "url": "https://surfd.net",
+    "type": "game",
+    "category": "arcade",
+    "tags": [
+      "Surf",
+      "Counter-Strike",
+      "Movement"
+    ],
+    "description": "Browser-based Counter-Strike surf movement gameplay.",
+    "featured": false,
+    "status": "unverified"
+  },
+  {
+    "id": "halo-ce",
+    "name": "Halo CE",
+    "url": "https://mitchellhynes.com/halo",
+    "type": "game",
+    "category": "action",
+    "tags": [
+      "FPS",
+      "Sci-fi"
+    ],
+    "description": "A browser-hosted version of Halo: Combat Evolved.",
+    "featured": false,
+    "status": "unverified"
+  },
+  {
+    "id": "halo-ce-mobile",
+    "name": "Halo CE mobile",
+    "url": "https://hcemobile.com",
+    "type": "game",
+    "category": "action",
+    "tags": [
+      "FPS",
+      "Sci-fi",
+      "Mobile"
+    ],
+    "description": "A browser-hosted mobile version of Halo: Combat Evolved.",
+    "featured": false,
+    "status": "unverified"
+  },
+  {
+    "id": "pes-6",
+    "name": "PES 6",
+    "url": "https://pes6.optijuegos.net",
+    "type": "game",
+    "category": "sports",
+    "tags": [
+      "Sports",
+      "Football",
+      "Multiplayer"
+    ],
+    "description": "A browser-hosted version of Pro Evolution Soccer 6.",
+    "featured": false,
+    "status": "unverified"
+  },
+  {
+    "id": "gta-vice-city",
+    "name": "GTA Vice City",
+    "url": "https://joncodeofficial.github.io/gta-vice-city-wasm/",
+    "type": "game",
+    "category": "action",
+    "tags": [
+      "Open world",
+      "Action",
+      "WASM"
+    ],
+    "description": "A browser-based WebAssembly version of Grand Theft Auto: Vice City.",
+    "featured": false,
+    "status": "unverified"
+  },
+  {
+    "id": "simpsons-hit-and-run",
+    "name": "The Simpsons: Hit & Run",
+    "url": "https://shar-wasm.cjoseph.workers.dev/?skipmovie",
+    "type": "game",
+    "category": "racing",
+    "tags": [
+      "Driving",
+      "Open world",
+      "WASM"
+    ],
+    "description": "A browser-based WebAssembly version of The Simpsons: Hit & Run.",
+    "featured": false,
+    "status": "unverified"
+  },
+  {
+    "id": "quake-1",
+    "name": "Quake 1",
+    "url": "https://q1.pieter.com",
+    "type": "game",
+    "category": "action",
+    "tags": [
+      "FPS",
+      "Classic"
+    ],
+    "description": "A browser version of the classic first-person shooter Quake.",
+    "featured": false,
+    "status": "unverified"
+  },
+  {
+    "id": "quake-2",
+    "name": "Quake 2",
+    "url": "https://q2.pieter.com",
+    "type": "game",
+    "category": "action",
+    "tags": [
+      "FPS",
+      "Classic"
+    ],
+    "description": "A browser version of the classic first-person shooter Quake II.",
+    "featured": false,
+    "status": "unverified"
+  },
+  {
+    "id": "quake-3",
+    "name": "Quake 3",
+    "url": "https://q3.pieter.com",
+    "type": "game",
+    "category": "action",
+    "tags": [
+      "FPS",
+      "Arena"
+    ],
+    "description": "A browser version of the arena first-person shooter Quake III.",
+    "featured": false,
+    "status": "unverified"
+  },
+  {
+    "id": "return-to-castle-wolfenstein",
+    "name": "Return to Castle Wolfenstein",
+    "url": "https://rtcw.pieter.com",
+    "type": "game",
+    "category": "action",
+    "tags": [
+      "FPS",
+      "Classic"
+    ],
+    "description": "A browser version of Return to Castle Wolfenstein.",
+    "featured": false,
+    "status": "unverified"
+  },
+  {
+    "id": "unreal-tournament",
+    "name": "Unreal Tournament",
+    "url": "https://ut.pieter.com",
+    "type": "game",
+    "category": "action",
+    "tags": [
+      "FPS",
+      "Arena",
+      "Multiplayer"
+    ],
+    "description": "A browser version of the classic arena shooter Unreal Tournament.",
+    "featured": false,
+    "status": "unverified"
+  },
+  {
+    "id": "half-life",
+    "name": "Half Life",
+    "url": "https://pixelsuft.github.io/hl/",
+    "type": "game",
+    "category": "action",
+    "tags": [
+      "FPS",
+      "Classic"
+    ],
+    "description": "A browser version of the classic first-person game Half-Life.",
+    "featured": false,
+    "status": "unverified"
+  },
+  {
+    "id": "half-life-cs-16",
+    "name": "Half Life / CS 1.6",
+    "url": "https://x8bitrain.github.io/webXash/",
+    "type": "game",
+    "category": "action",
+    "tags": [
+      "FPS",
+      "Classic",
+      "Multiplayer"
+    ],
+    "description": "A browser-hosted Half-Life and Counter-Strike 1.6 experience.",
+    "featured": false,
+    "status": "unverified"
+  },
+  {
+    "id": "diablo",
+    "name": "Diablo",
+    "url": "https://johnimril.github.io/diablo_web/",
+    "type": "game",
+    "category": "action",
+    "tags": [
+      "Action RPG",
+      "Classic"
+    ],
+    "description": "A browser-based version of the classic action RPG Diablo.",
+    "featured": false,
+    "status": "unverified"
+  },
+  {
+    "id": "hedgewars",
+    "name": "Hedgewars",
+    "url": "https://webwars.link",
+    "type": "game",
+    "category": "strategy",
+    "tags": [
+      "Strategy",
+      "Artillery",
+      "Multiplayer"
+    ],
+    "description": "A browser-based artillery strategy game inspired by Worms-style gameplay.",
+    "featured": false,
+    "status": "unverified"
   }
 ]

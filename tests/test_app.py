@@ -35,6 +35,11 @@ def test_contribute_page():
 
     assert response.status_code == 200
     assert b"Help improve PlayLink" in response.data
+    assert b"Valid URL" in response.data
+    assert b"No duplicates" in response.data
+    assert b"Submit a game link" in response.data
+    assert b"issues/new?template=suggest-resource.yml" in response.data
+    assert b"github.com/bhivourdevnath-stack/GameLink" in response.data
 
 
 def test_catalog_schema_and_values():
@@ -95,6 +100,16 @@ def test_malformed_catalog_fails_safely(monkeypatch, tmp_path):
 
     assert client.get("/").status_code == 200
     assert client.get("/directory").status_code == 200
+
+
+def test_games_use_genre_categories():
+    games = json.loads((DATA_DIR / "games.json").read_text(encoding="utf-8"))
+    valid_categories = {"action", "arcade", "puzzle", "strategy", "racing", "sports", "multiplayer"}
+
+    assert all(game["category"] in valid_categories for game in games)
+    assert all("PC Game" not in game["tags"] for game in games)
+    assert b"BO1 Zombies" in app.test_client().get("/directory?category=action").data
+    assert b"Browser Games" not in app.test_client().get("/directory").data
 
 
 def test_catalog_categories_are_ordered():

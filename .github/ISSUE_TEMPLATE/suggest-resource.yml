@@ -1,0 +1,54 @@
+name: Suggest a resource
+description: Suggest a browser game or website for the PlayLink catalog
+title: "Resource suggestion: "
+labels: [resource suggestion]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve PlayLink. Please search the directory and existing issues before submitting.
+  - type: input
+    id: name
+    attributes:
+      label: Resource name
+      placeholder: Example Game
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Canonical URL
+      placeholder: https://example.com
+      description: Use the official public HTTP or HTTPS URL.
+    validations:
+      required: true
+  - type: dropdown
+    id: type
+    attributes:
+      label: Resource type
+      options:
+        - Game
+        - Website
+    validations:
+      required: true
+  - type: input
+    id: category
+    attributes:
+      label: Category ID
+      description: Choose an ID from data/categories.json.
+      placeholder: puzzle
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Short description
+      description: Describe what the resource does in one or two neutral sentences.
+      placeholder: Briefly explain the game or website and why it belongs in PlayLink.
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional notes
+      placeholder: Suggested tags, duplicate-check evidence, or anything else maintainers should know.
